@@ -19,11 +19,6 @@ const windowHeight = Dimensions.get('window').height;
 export default function ({ navigation }) {
   const [text, setText] = useState("");
   const [isReady, setIsReady] = useState(false);
-  function onChangeText() {
-
-  }
-
-
   return (
     <Layout>
       <TopNavCustom
@@ -48,6 +43,7 @@ export default function ({ navigation }) {
                 width: 220,
                 height: 220,
                 margin: 20,
+                display: !isReady ? "none" : "flex"
               }}
               source={{ uri: 'https://www.freeiconspng.com/uploads/file-pokeball-png-0.png' }}
             />
@@ -64,21 +60,34 @@ export default function ({ navigation }) {
                 red text away when "Ready!" is in the textbox.
 
               </Text> */}
-                <Text style={{ marginBottom: 10 }}>Are you ready to be a pokemon master?</Text >
-                <TextInput
-                  editable
-                  numberOfLines={2}
-                  value={text}
-                  style={
-                    {
-                      borderColor: "black",
-                      borderWidth: 1
-                    }
+              <Text style={{ marginBottom: 10 }}>Are you ready to be a pokemon master?</Text >
+              <TextInput
+                editable
+                numberOfLines={2}
+                onChangeText={(text) => {
+                  setText(text);
+                  if (text.toUpperCase() === "READY")
+                    setIsReady(true);
+                }}
+                value={text}
+                style={
+                  {
+                    borderColor: "black",
+                    borderWidth: 1,
+                    paddingLeft: 20
                   }
-                  maxLength={40}
-                />
-                <Text style={{ color: "red", marginTop: 10 }}>I am not ready yet!</Text >
-             
+                }
+                maxLength={40}
+              />
+              <Text style={
+                {
+                  color: "red",
+                  display: isReady ? "none" : "flex",
+                  marginTop: 10
+                }}
+              >I am not ready yet!
+              </Text >
+              
             </SectionContent>
           </Section>
         </View>
