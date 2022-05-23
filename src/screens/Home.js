@@ -48,7 +48,6 @@ export default function ({ navigation }) {
                 width: 220,
                 height: 220,
                 margin: 20,
-                display: !isReady ? "none" : "flex"
               }}
               source={{ uri: 'https://www.freeiconspng.com/uploads/file-pokeball-png-0.png' }}
             />
@@ -69,7 +68,6 @@ export default function ({ navigation }) {
                 <TextInput
                   editable
                   numberOfLines={2}
-                  onChangeText={text => onChangeText(text)}
                   value={text}
                   style={
                     {
