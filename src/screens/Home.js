@@ -19,10 +19,6 @@ const windowHeight = Dimensions.get('window').height;
 export default function ({ navigation }) {
   const [text, setText] = useState("");
   const [isReady, setIsReady] = useState(false);
-  function onChangeText() {
-
-  }
-
 
   return (
     <Layout>
@@ -38,32 +34,22 @@ export default function ({ navigation }) {
             minHeight: windowHeight * 3 / 4
           }}
         >
-          <TouchableHighlight
-            onPress={() => {
-              navigation.navigate("Pokedex");
+          
+          <Image
+            style={{
+              width: 220,
+              height: 220,
+              margin: 20,
             }}
-          >
-            <Image
-              style={{
-                width: 220,
-                height: 220,
-                margin: 20,
-              }}
-              source={{ uri: 'https://www.freeiconspng.com/uploads/file-pokeball-png-0.png' }}
-            />
-          </TouchableHighlight>
+            source={{ uri: 'https://www.freeiconspng.com/uploads/file-pokeball-png-0.png' }}
+          />
+          
           <Section
             style={{
               alignItems: "stretch",
               padding: 20
             }}>
             <SectionContent>
-              {/* <Text>
-                Requirement: Try to show the hidden image and make it clickable that
-                goes to /pokedex when the input below is "Ready!" remember to hide the
-                red text away when "Ready!" is in the textbox.
-
-              </Text> */}
                 <Text style={{ marginBottom: 10 }}>Are you ready to be a pokemon master?</Text >
                 <TextInput
                   editable
@@ -78,7 +64,7 @@ export default function ({ navigation }) {
                   maxLength={40}
                 />
                 <Text style={{ color: "red", marginTop: 10 }}>I am not ready yet!</Text >
-             
+            
             </SectionContent>
           </Section>
         </View>
