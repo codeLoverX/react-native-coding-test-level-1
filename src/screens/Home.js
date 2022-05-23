@@ -2,14 +2,10 @@ import React, { useState } from "react";
 import { View, ScrollView, Form, Dimensions, Linking, TouchableHighlight, Image, TextInput } from "react-native";
 import {
   Layout,
-  TopNav,
   Text,
   Button,
   Section,
   SectionContent,
-  useTheme,
-  SectionImage,
-  themeColor,
 } from "react-native-rapi-ui";
 import TopNavCustom from '../components/TopNav';
 import { Ionicons } from "@expo/vector-icons";
