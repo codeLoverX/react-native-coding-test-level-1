@@ -11,6 +11,7 @@
     "@expo/vector-icons": "^12.0.0",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
+    "axios": "^0.27.2",
     "expo": "~44.0.0",
     "expo-asset": "~8.4.6",
     "expo-font": "~10.0.4",
@@ -18,10 +19,16 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
+    "react-native-chart-kit": "^6.12.0",
     "react-native-rapi-ui": "^0.2.1",
-    "react-native-web": "0.17.1",
     "react-native-safe-area-context": "3.3.2",
-    "react-native-screens": "~3.10.1"
+    "react-native-screens": "~3.10.1",
+    "react-native-table-component": "^1.2.2",
+    "react-native-web": "0.17.1",
+    "expo-print": "~11.1.0",
+    "expo-sharing": "~10.1.0",
+    "react-native-view-shot": "3.1.2",
+    "expo-image-manipulator": "~10.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "../screens/Home";
 import Pokedex from "../screens/Pokedex";
+import { AppProvider } from "../state/printReducer";
 
 const MainStack = createNativeStackNavigator();
 
@@ -14,16 +15,19 @@ const Main = () => {
         headerShown: false,
       }}
     >
-      <MainStack.Screen name="Home" component={Home} />
       <MainStack.Screen name="Pokedex" component={Pokedex} />
+
+      <MainStack.Screen name="Home" component={Home} />
     </MainStack.Navigator>
   );
 };
 
 export default () => {
   return (
-    <NavigationContainer>
-      <Main />
-    </NavigationContainer>
+    <AppProvider>
+      <NavigationContainer>
+        <Main />
+      </NavigationContainer>
+    </AppProvider>
   );
 };

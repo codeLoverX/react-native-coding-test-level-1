@@ -4,8 +4,8 @@ import { ThemeProvider } from "react-native-rapi-ui";
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <AppNavigator />
-    </ThemeProvider>
+      <ThemeProvider>
+        <AppNavigator />
+      </ThemeProvider>
   );
 }

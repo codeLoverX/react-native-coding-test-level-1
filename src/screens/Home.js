@@ -1,20 +1,15 @@
 import React, { useState } from "react";
-import { View, ScrollView, Form, Dimensions, Linking, TouchableHighlight, Image, TextInput } from "react-native";
+import { View, ScrollView,  Dimensions, TouchableHighlight, Image } from "react-native";
 import {
   Layout,
-  TopNav,
   Text,
-  Button,
+  TextInput,
   Section,
   SectionContent,
-  useTheme,
-  SectionImage,
-  themeColor,
 } from "react-native-rapi-ui";
 import TopNavCustom from '../components/TopNav';
-import { Ionicons } from "@expo/vector-icons";
 
-const windowHeight = Dimensions.get('window').height;
+const {height: windowHeight, width: windowWidth} = Dimensions.get('window');
 
 export default function ({ navigation }) {
   const [text, setText] = useState("");
@@ -54,12 +49,6 @@ export default function ({ navigation }) {
               padding: 20
             }}>
             <SectionContent>
-              {/* <Text>
-                Requirement: Try to show the hidden image and make it clickable that
-                goes to /pokedex when the input below is "Ready!" remember to hide the
-                red text away when "Ready!" is in the textbox.
-
-              </Text> */}
               <Text style={{ marginBottom: 10 }}>Are you ready to be a pokemon master?</Text >
               <TextInput
                 editable
