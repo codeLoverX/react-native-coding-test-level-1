@@ -35,7 +35,7 @@ export default function ({ navigation }) {
   }
   // context for eliminating 2-way and nested data transfer
   // reducer for setstate in context
- 
+
   useEffect(() => {
     axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${(page - 1) * numPokemons}&limit=${numPokemons}`)
       .then((response) => {
@@ -116,3 +116,5 @@ export default function ({ navigation }) {
 
   )
 }
+        
+
